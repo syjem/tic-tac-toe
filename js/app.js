@@ -36,18 +36,17 @@ function init() {
     }
 
     window.addEventListener("storage", () => {
-        console.log("State change from the other tab.");
         initView();
     });
 
     initView();
 
-    view.resetEvent((event) => {
+    view.resetEvent(() => {
         model.reset();
         initView();
     });
 
-    view.newRoundEvent((event) => {
+    view.newRoundEvent(() => {
         model.newRound();
         initView();
     });

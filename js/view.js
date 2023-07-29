@@ -18,7 +18,6 @@ export default class View {
 
         this.$$.squares = this.#selectorAll("[data-id='square']");
 
-        // UI-only eventListener
         // ✅ Toggle Actions
         this.$.actionBtn.addEventListener("click", () => {
             this.#toggleMenu();
